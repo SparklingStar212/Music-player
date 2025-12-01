@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Sign In - Music Player</title>
+	<link rel="stylesheet" href="signin.css" />
+	<link rel="shortcut icon" href="../Images-and-Icons/favicon.svg" type="image/svg">
+</head>
+<body>
+	<main class="auth-page">
+		<div class="auth-card">
+			<div class="brand">
+				<img src="../Images-and-Icons/icon-park--music-cd.svg" alt="logo" width="48" />
+				<h1>Music Player</h1>
+			</div>
+
+			<form id="signinForm" class="auth-form" onsubmit="event.preventDefault(); signIn();">
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email"/>
+
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password"/>
+
+				<div class="row-between">
+					<label class="checkbox"><input type="checkbox" /> Remember me</label>
+					<a class="link" href="#">Forgot?</a>
+				</div>
+
+				<button class="btn primary" type="submit">Sign In</button>
+			</form>
+      <small style="display: block; text-align: center; margin: 8px 0;">Or</small>
+      <button class="btn ghost" type="button" style="margin: 8px 0; width: 100%;" id="signinWithGoogle" onclick="googleSignIn()">Sign In with Google</button>
+      <small style="display: block;">Don't have an account? <a class="link" href="signup.html">Sign Up</a></small>
+		</div>
+	</main>
+	<script src="authentication.js" type="module"></script>
+</body>
+</html>

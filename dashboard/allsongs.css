@@ -1,0 +1,132 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #079aa3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+}
+.search-circle{
+  background-color: #079aa3;
+  padding: 10px 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar{
+  padding: 40px 20px;
+  position: fixed;
+  align-items: center;
+  bottom: 0;
+  top: 80px;
+  width: 35vh;
+  border-right: 2px solid #079aa3;
+}
+main{
+  margin-top: 15vh;
+  margin-left: 44vh;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.music-image{
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+.musicCard{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.2fr 0.1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 10px;
+}
+.music-grid-header{
+  display: grid;
+  font-weight: bold;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.2fr 0.1fr;
+  gap: 20px;
+  font-size: 18px;
+  color: #079aa3 ;
+}
+.musicCard.active {
+  color: #079aa3;
+  background-color: #686868ff;
+}
+.musicCard:hover {
+  background-color: #333333ff;
+  cursor: pointer;
+}
+.cell{
+  word-break: normal;
+  min-width: 30px;
+}
+.drop-down {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  border: 2px solid #079aa3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  border-radius: 5px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+@media (max-width: 490px) {
+  .sidebar {
+    display: none;
+  }
+  main {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+@media (max-width: 600px){
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .music-grid-header {
+    grid-template-columns: 0.5fr 1fr 1fr 0.2fr;
+  }
+  .musicCard {
+    grid-template-columns: 0.5fr 1fr 1fr 0.2fr;
+  }
+}
+@media (min-width: 491px) and (max-width: 820px) {
+  .sidebar {
+    width: 18vw;
+  }
+  main {
+    margin-left: 24vw;
+  }
+}
+@media (min-width: 821px) and (max-width: 1024px) {
+  .sidebar {
+    width: 25vw;
+  }
+  main {
+    margin-left: 30vw;
+  }
+}

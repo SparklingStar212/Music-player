@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Music Player</title>
+  <link rel="stylesheet" href="allsongs.css">
+  <link rel="shortcut icon" href="../Images-and-Icons/favicon.svg" type="image/svg">
+</head>
+
+<body>
+  <nav>
+    <div style="display: flex; align-items: center; gap: 10px; margin-left: 20px;">
+      <img src="../Images-and-Icons/icon-park--music-cd.svg" width="60" alt="">
+      <span class="brandname" style="font-size: 30px;">Music Player</span>
+    </div>
+    <div style="margin-right: 20px;">
+      <div class="search-circle" onclick="search()">
+        <img src="../Images-and-Icons/lets-icons--search.svg" alt="">
+      </div>
+    </div>
+  </nav>
+  <section class="sidebar">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <div class="prof-pic" style="width: 60px; height: 60px; border-radius: 50%; background-color: gray;"></div>
+      <p style="font-size: 20px; margin-top: 0; text-align: center;">Deborah Alabi</p>
+    </div>
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 5px;" id="plays" onclick="playLists(event)">
+        <img src="../Images-and-Icons/tabler--playlist.svg" alt="">
+        <p style="margin: 0;">Playlists</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 5px;" id="favs" onclick="favourites(event)">
+        <img src="../Images-and-Icons/mdi--heart.svg" alt="">
+        <p style="margin: 0;">Favourites</p>
+      </div>
+    </div>
+    <small style="display: block; text-align: start; position: fixed; bottom: 10px; width: 18vw;">© 2024 Music Player. All rights
+      reserved.</small>
+  </section>
+  <section>
+    <main>
+      <div class="music-grid-header">
+        <p></p>
+        <p>Title</p>
+        <p>Artist</p>
+        <p class="hide-on-mobile">Album</p>
+        <p class="hide-on-mobile">Release Date</p>
+      </div>
+      <div class="music-grid" id="musicGrid">
+      </div>
+    </main>
+  </section>
+</body>
+<script src="allsongs.js" type="module"></script>
+</html>
